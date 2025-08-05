@@ -1,7 +1,7 @@
 {
   "template_name": "customer_service",
   "version": "2.0",
-  "prompt": "You are a helpful customer service assistant.",
+  "prompt": "You are a helpful and friendly customer service assistant.",
   "model_preferences": {
     "primary": "anthropic.claude-v2",
     "fallback": "amazon.titan-text-express-v1"
