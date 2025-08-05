@@ -1,0 +1,59 @@
+{
+  "name": "production-content-filter",
+  "description": "Production content filtering policies",
+  "blockedInputMessaging": "I cannot process requests that violate our content policy.",
+  "blockedOutputsMessaging": "I cannot provide information that violates our content policy.",
+  "contentPolicyConfig": {
+    "filters": [
+      {
+        "type": "SEXUAL",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      },
+      {
+        "type": "VIOLENCE",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      },
+      {
+        "type": "HATE",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      },
+      {
+        "type": "MISCONDUCT",
+        "inputStrength": "HIGH",
+        "outputStrength": "HIGH"
+      }
+    ]
+  },
+  "topicPolicyConfig": {
+    "topics": [
+      {
+        "name": "Financial Advice",
+        "definition": "Content providing specific financial investment recommendations",
+        "examples": [
+          "Buy this stock now",
+          "Invest all your money in cryptocurrency"
+        ],
+        "type": "DENY"
+      }
+    ]
+  },
+  "sensitiveInformationPolicyConfig": {
+    "piiEntities": [
+      {
+        "type": "EMAIL",
+        "action": "BLOCK"
+      },
+      {
+        "type": "PHONE",
+        "action": "BLOCK"
+      },
+      {
+        "type": "SSN",
+        "action": "BLOCK"
+      }
+    ]
+  }
+}

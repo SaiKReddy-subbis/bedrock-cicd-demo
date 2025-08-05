@@ -1,0 +1,14 @@
+{
+  "template_name": "customer_service",
+  "version": "2.0",
+  "prompt": "You are a helpful customer service assistant.",
+  "model_preferences": {
+    "primary": "anthropic.claude-v2",
+    "fallback": "amazon.titan-text-express-v1"
+  },
+  "parameters": {
+    "max_tokens": 300,
+    "temperature": 0.7,
+    "top_p": 0.9
+  }
+}
